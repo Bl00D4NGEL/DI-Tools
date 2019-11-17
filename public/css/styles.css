@@ -65,6 +65,19 @@ button, input[type=submit] {
 .label-div {
   margin: 3.5vh 0; }
 
+.division-select > select {
+  height: 31.5vh;
+  width: 80%;
+  overflow-y: auto;
+  color: black; }
+  .division-select > select option {
+    padding: 10px 0 0 10px; }
+
+.taglist > div {
+  margin: 20px; }
+  .taglist > div div {
+    margin-right: 20px; }
+
 .spinner {
   height: 10vh;
   opacity: 1;
@@ -181,7 +194,7 @@ button, input[type=submit] {
     height: 0;
     width: 0; }
   .div-checkbox label {
-    padding-left: 15px; }
+    margin: 25px; }
 
 /* Create a custom checkbox */
 .checkmark {

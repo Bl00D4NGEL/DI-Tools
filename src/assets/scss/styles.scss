@@ -91,6 +91,24 @@ button, input[type=submit] {
   margin: $main_height/2 0;
 }
 
+.division-select > select {
+  height: $main_height * 4.5;
+  width: 80%;
+  overflow-y: auto;
+  color: black;
+
+  option {
+    padding: 10px 0 0 10px;
+  }
+}
+
+.taglist > div {
+  margin: 20px;
+  div {
+    margin-right: 20px;
+  }
+}
+
 @import "spinner";
 @import "boxes";
 @import "symbols";

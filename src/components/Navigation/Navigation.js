@@ -4,19 +4,10 @@ import {NavLink} from "react-router-dom";
 
 import icon from '../../assets/img/dmg-inc-icon-light.png';
 
-export default function Navigation({isLoggedIn, user}) {
+export default function Navigation() {
     const defaultMarginLeft = 40;
     const generateNavigationLinks = () => {
         return RouteConfig.getAll().map((route) => {
-            if (
-                (route.requiresLogin && !isLoggedIn)
-                || route.requiredRole > user.role
-            ) {
-                return null;
-            }
-            if (route.path === '/login' && isLoggedIn) {
-                return null;
-            }
             return <NavLink key={route.path} to={route.path}>{route.name}</NavLink>
         });
     };
