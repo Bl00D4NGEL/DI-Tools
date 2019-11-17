@@ -1,0 +1,357 @@
+/* Colors */
+/* Damage Inc */
+/* Dimensions */
+th, .box {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */ }
+
+body {
+  background-color: #131313;
+  font-weight: 600;
+  color: #ddd;
+  font-size: 1.5vw; }
+
+table {
+  width: 100%;
+  border-spacing: 0; }
+
+td {
+  padding: 10px;
+  background-color: #444;
+  border: 1px solid #444;
+  font-size: 1vw; }
+
+th {
+  background-color: #292929;
+  text-align: left;
+  padding: 10px;
+  line-height: 1.4; }
+
+h1 {
+  font-size: 2.5vw; }
+
+label {
+  margin: 7vh 0;
+  font-size: 1vw; }
+  label input[type=radio], label input[type=checkbox] {
+    vertical-align: middle;
+    margin-right: 0.5vw;
+    height: 0.8vw;
+    width: 0.8vw; }
+
+input[type=text], input[type=password] {
+  margin-top: 1.5vw;
+  line-height: 1.4; }
+
+a {
+  color: #ddd !important;
+  text-decoration: none; }
+
+button, input[type=submit] {
+  background-color: #b64240;
+  color: #ddd;
+  border: 0;
+  padding: 5px 20px; }
+
+.main-font-size {
+  font-size: 1.5vw; }
+
+.label-div {
+  margin: 3.5vh 0; }
+
+.spinner {
+  height: 10vh;
+  opacity: 1;
+  transition: opacity linear 0.1s; }
+  .spinner::before {
+    animation: 1s linear infinite spinner;
+    border: solid 3px #ddd;
+    border-bottom-color: #b64240;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    left: 50%;
+    opacity: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transform-origin: center;
+    width: 40px;
+    will-change: transform; }
+
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg); }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg); } }
+/* Other */
+.box {
+  width: 1vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column; }
+
+.warning-box {
+  background-color: #a06f15;
+  color: #fff; }
+
+.ok-box {
+  background-color: #277d27;
+  color: #fff; }
+
+.error-box {
+  background-color: #b64240;
+  color: #fff; }
+
+.small-ok-box {
+  width: 20px;
+  height: 20px;
+  background-color: #277d27;
+  color: #fff;
+  align-items: center; }
+
+.small-warning-box {
+  width: 20px;
+  height: 20px;
+  background-color: #a06f15;
+  color: #fff;
+  align-items: center; }
+
+.small-error-box {
+  width: 20px;
+  height: 20px;
+  background-color: #b64240;
+  color: #fff;
+  align-items: center; }
+
+.sort-order:after {
+  content: '\25b2'; }
+
+.sort-order.reverse:after {
+  content: '\25bc'; }
+
+.checked:after {
+  content: "\2713"; }
+
+.not-checked:after {
+  content: "\2613"; }
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column; }
+
+.full-width {
+  width: 100%; }
+
+.flex {
+  display: flex; }
+
+.flex-wrap {
+  flex-wrap: wrap; }
+
+.bolder {
+  font-weight: bolder; }
+
+.hidden {
+  display: none !important; }
+
+/* The container */
+.div-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .div-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  .div-checkbox label {
+    padding-left: 15px; }
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5vw;
+  width: 1.5vw;
+  background-color: #ddd; }
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 0.5vw;
+  top: 0.3vh;
+  border: solid #b64240;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0.5vw;
+  height: 1vw; }
+
+.div-checkbox input:checked ~ .checkmark:after {
+  display: block; }
+
+.sidebar-toggle {
+  position: fixed;
+  left: -33px;
+  top: 0;
+  z-index: 2;
+  padding: 10px;
+  margin: 0;
+  background: red;
+  color: white;
+  transition: 0.3s;
+  transform: translateX(100%); }
+
+#sidebar-toggle-input {
+  display: none; }
+
+#sidebar-toggle-input + label:before {
+  content: ">"; }
+
+#sidebar-toggle-input:checked + .sidebar-toggle {
+  left: 148px; }
+
+#sidebar-toggle-input:checked + label:before {
+  content: "X"; }
+
+.sidebar {
+  position: fixed;
+  width: 210px;
+  transition: 0.3s;
+  background: #111;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%); }
+  .sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block; }
+  .sidebar a.active {
+    color: #b64240 !important; }
+  .sidebar a:hover {
+    color: #c2716f !important; }
+  .sidebar div > img {
+    max-width: 150px;
+    padding: 60px 30px; }
+
+#sidebar-toggle-input:checked ~ .sidebar {
+  transform: none; }
+
+.content {
+  transition: margin-left .3s;
+  margin: 85px 40px 40px 40px; }
+
+/* Small Desktops */
+@media screen and (max-width: 1200px) {
+  .dw-hide {
+    display: none; }
+
+  body {
+    font-size: 2vw; }
+
+  h1 {
+    font-size: 3vw; }
+
+  label {
+    font-size: 1.5vw; }
+
+  td {
+    font-size: 1.5vw; }
+
+  .main-font-size {
+    font-size: 2vw; }
+
+  .box {
+    width: 1.5vw; } }
+/* Tablet */
+@media screen and (max-width: 992px) {
+  .tw-hide {
+    display: none; } }
+/* Small Device / Landscape Mode */
+@media screen and (max-width: 768px) {
+  .sdw-hide {
+    display: none; }
+
+  body {
+    font-size: 3.5vw; }
+
+  h1 {
+    font-size: 4.5vw; }
+
+  label {
+    font-size: 3vw; }
+
+  td {
+    font-size: 3vw; }
+
+  .main-font-size {
+    font-size: 3.5vw; }
+
+  .box {
+    width: 3vw; }
+
+  .nav-link {
+    width: 100%;
+    padding: 2vh; }
+
+  nav > ul > li {
+    display: flex;
+    width: 100%;
+    height: 7vh; } }
+/* Phones */
+@media screen and (max-width: 576px) {
+  .pw-hide {
+    display: none; }
+
+  body {
+    font-size: 4vw; }
+
+  h1 {
+    font-size: 5vw; }
+
+  label {
+    font-size: 4.5vw; }
+
+  select {
+    font-size: 4vw; }
+
+  table {
+    padding-top: 0; }
+
+  td {
+    font-size: 3.5vw; }
+
+  button, input[type=submit] {
+    padding: 3vw 5vw;
+    font-size: 4vw; }
+
+  .main-font-size {
+    font-size: 4vw; }
+
+  .box {
+    width: 3.5vw; } }
+@media screen and (max-height: 400px) {
+  nav > ul > li {
+    height: 12vh; } }
+
+/*# sourceMappingURL=styles.css.map */

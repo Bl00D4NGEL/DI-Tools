@@ -1,0 +1,26 @@
+.vertical-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.hidden {
+    display: none !important;
+}

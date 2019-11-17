@@ -1,0 +1,105 @@
+/* Colors */
+$white: #fff;
+$primary_bg: #131313;
+$table_field_bg_color: #444;
+$table_head_bg_color: #292929;
+
+/* Damage Inc */
+$dmg_inc_red: #b64240;
+$dmg_inc_white: #ddd;
+
+/* Dimensions */
+$main_height: 7vh;
+$main_font_size: 1.5vw;
+$line_height: 1.4;
+$nav_menu_width: 210px;
+
+
+%no-select {
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+}
+
+body {
+  background-color: $primary_bg;
+  font-weight: 600;
+  color: $dmg_inc_white;
+  font-size: $main_font_size;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+td {
+  padding: 10px;
+  background-color: $table_field_bg_color;
+  border: 1px solid $table_field_bg_color;
+  font-size: $main_font_size - 0.5vw;
+}
+
+th {
+  @extend %no-select;
+  background-color: $table_head_bg_color;
+  text-align: left;
+  padding: 10px;
+  line-height: $line_height;
+}
+
+h1 {
+  font-size: $main_font_size + 1vw;
+}
+
+label {
+  margin: $main_height 0;
+  font-size: $main_font_size - 0.5vw;
+
+  input[type=radio], input[type=checkbox] {
+    vertical-align: middle;
+    margin-right: 0.5vw;
+    height: $main_font_size - 0.7vw;
+    width: $main_font_size - 0.7vw;
+  }
+
+}
+
+input[type=text], input[type=password] {
+  margin-top: 1.5vw;
+  line-height: $line_height;
+}
+
+a {
+  color: $dmg_inc_white !important;
+  text-decoration: none;
+}
+
+button, input[type=submit] {
+  background-color: $dmg_inc_red;
+  color: $dmg_inc_white;
+  border: 0;
+  padding: 5px 20px;
+}
+
+.main-font-size {
+  font-size: $main_font_size;
+}
+
+.label-div {
+  margin: $main_height/2 0;
+}
+
+@import "spinner";
+@import "boxes";
+@import "symbols";
+@import "helper";
+@import "checkboxes";
+@import "sidebar";
+
+@import "small-desktop";
+@import "tablet";
+@import "small-device";
+@import "phones";
+@import "cropped-phone";
