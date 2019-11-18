@@ -17,7 +17,6 @@ export default function DivisionSelector({setSelectedDivisions}) {
             <CustomSelect
                 data={{multiple: true}}
                 options={selectableDivisions}
-                defaultValue='I'
                 onChange={(e) => setSelectedDivisions(MultipleSelectGetSelectedOptionsHelper(e))}
             />
         </div>

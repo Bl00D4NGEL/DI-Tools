@@ -29,7 +29,10 @@ export default function CustomRequest(endpoint, successCallback, errorCallback, 
                 method: endpoint.method(),
                 body: JSON.stringify(
                     postData !== undefined ? postData : {}
-                )
+                ),
+                headers: {
+                    'Content-Type': 'application/json; charset=UTF-8'
+                }
             }
         );
     };

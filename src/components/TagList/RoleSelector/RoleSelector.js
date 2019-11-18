@@ -7,8 +7,19 @@ export default function RoleSelector({setSelectedRoles}) {
     const [selectedRoles, _setSelectedRoles] = useState({});
 
     useEffect(() => {
-        LoadRolesService({setRoles: setPossibleRoles});
+        LoadRolesService({
+            setRoles: (data) => {
+                setPossibleRoles(data);
+                setRolesAsSelected(data);
+            }
+        });
     }, []);
+
+    const setRolesAsSelected = (roles) => {
+        roles.forEach(role => selectedRoles[role] = true);
+        _setSelectedRoles(selectedRoles);
+        setSelectedRoles(Object.keys(selectedRoles).filter(role => selectedRoles[role]));
+    };
 
     const handleCheckbox = (e) => {
         selectedRoles[e.currentTarget.value] = e.currentTarget.checked;
@@ -30,18 +41,22 @@ export default function RoleSelector({setSelectedRoles}) {
     const generateRoleDivs = (maxValuesPerColumn) => {
         const groups = [];
         for (let i = 0; i <= Math.floor(possibleRoles.length / maxValuesPerColumn); i++) {
-            groups.push(possibleRoles.slice(i * maxValuesPerColumn, i * maxValuesPerColumn + maxValuesPerColumn).map(role => {
-                selectedRoles[role] = true;
-                return <CheckboxInput
-                    name={role}
-                    value={role}
-                    defaultChecked={true}
-                    description={roleNameMap[role] !== undefined ? roleNameMap[role] : role}
-                    onClick={handleCheckbox}
-                />
-            }));
+            groups.push({
+                key: i,
+                data: possibleRoles.slice(i * maxValuesPerColumn, i * maxValuesPerColumn + maxValuesPerColumn).map(role => {
+                        return <CheckboxInput
+                            name={role}
+                            value={role}
+                            key={role}
+                            defaultChecked={true}
+                            description={roleNameMap[role] !== undefined ? roleNameMap[role] : role}
+                            onClick={handleCheckbox}
+                        />
+                    }
+                )
+            });
         }
-        return groups.map(group => <div>{group}</div>);
+        return groups.map(group => <div key={group.key}>{group.data}</div>);
     };
 
     return <div>

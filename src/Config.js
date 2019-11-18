@@ -7,6 +7,9 @@ export default class Config {
     static mdrRoleNamesEndpoint() {
         return new Endpoint(_mdrUrL + '/get/roleNames');
     }
+    static mdrGetTagListEndpoint() {
+        return new Endpoint(_mdrUrL + '/get/tagList', 'POST');
+    }
 }
 
 class Endpoint {
