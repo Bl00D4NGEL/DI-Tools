@@ -4,7 +4,8 @@ import DivisionSelector from "./DivisionSelector/DivisionSelector";
 import RoleSelector from "./RoleSelector/RoleSelector";
 import CustomForm from "../BaseElements/Form";
 import GetTagListDataService from "../../services/GetTagListDataService/GetTagListDataService";
-import MemberTag from "./MemberTag";
+import Grouper from "./Grouper";
+import DivisionTag from "./DivisionTag/DivisionTag";
 
 export default function TagList() {
     const [selectedDivisions, setSelectedDivisions] = useState([]);
@@ -18,12 +19,20 @@ export default function TagList() {
 
     const generateTagList = () => {
         if (membersToTag !== undefined) {
-            return Object.keys(membersToTag).map(role => membersToTag[role].map(
-                member => <MemberTag key={member.id} id={member.id} name={member.name}/>
-            ));
+            const members = [];
+            Object.keys(membersToTag).forEach(
+                position => membersToTag[position].forEach(
+                    member => members.push(member)
+                )
+            );
+            return Object.keys(Grouper({members}))
+                    .map(
+                        division => <DivisionTag key={division} divisionName={division} positions={Grouper({members})[division]}/>
+                    );
         }
         return null;
     };
+
 
     return <div className="taglist">
         <CustomForm
