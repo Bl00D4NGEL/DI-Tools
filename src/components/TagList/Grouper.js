@@ -1,3 +1,5 @@
+import {AWAY, PROBATION} from "./DivisionTag/Positions";
+
 export default function Grouper({members}) {
     const groups = {};
     addGroupedMembersToObject(members, groups, 'division');
@@ -7,7 +9,12 @@ export default function Grouper({members}) {
 
 const groupByPosition = (divisions) => {
     Object.keys(divisions).forEach(divisionName => {
-        addGroupedMembersToObject(divisions[divisionName].members, divisions[divisionName], 'position');
+        if ([PROBATION, AWAY].includes(divisions[divisionName].members[0].rank)) {
+            addGroupedMembersToObject(divisions[divisionName].members, divisions[divisionName], 'rank');
+        }
+        else {
+            addGroupedMembersToObject(divisions[divisionName].members, divisions[divisionName], 'position');
+        }
         groupByTeam(divisions[divisionName]);
     });
 };

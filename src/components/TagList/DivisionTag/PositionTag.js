@@ -3,6 +3,7 @@ import TeamTag from "./TeamTag";
 import {POSITION_LONG_NAMES} from "./Positions";
 
 export default function PositionTag({positionName, teams}) {
+    console.log(positionName);
     return <div>
         <h2>{POSITION_LONG_NAMES[positionName]}</h2>
         {

@@ -7,6 +7,8 @@ export const SECOND_IN_CHARGE = '2IC';
 export const ROSTER_LEADER = 'RL';
 export const MEMBER = 'TM';
 export const COACH = 'Coach';
+export const PROBATION = 'Probation';
+export const AWAY = 'Away';
 
 export const POSITION_LONG_NAMES = {
     [HOUSE_GENERAL]: 'House General',
@@ -17,7 +19,9 @@ export const POSITION_LONG_NAMES = {
     [SECOND_IN_CHARGE]: 'Second in Charge',
     [ROSTER_LEADER]: 'Roster Leader',
     [MEMBER]: 'Member',
-    [COACH]: 'Coach'
+    [COACH]: 'Coach',
+    [PROBATION]: 'Probation',
+    [AWAY]: 'Away'
 };
 
 export const PRIORITIES = {
@@ -29,5 +33,7 @@ export const PRIORITIES = {
     [SECOND_IN_CHARGE]: 6,
     [ROSTER_LEADER]: 7,
     [MEMBER]: 8,
-    [COACH]: 8
+    [COACH]: 8,
+    [AWAY]: 9,
+    [PROBATION]: 10
 };
