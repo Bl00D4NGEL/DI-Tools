@@ -11,7 +11,7 @@ export default function DivisionSelector({setSelectedDivisions}) {
     }, []);
     return <div>
         <div style={{paddingBottom: 20 + 'px'}}>
-            <span>Select divisions to get taglist for</span>
+            <span>Select divisions to tag</span>
         </div>
         <div className="division-select">
             <CustomSelect

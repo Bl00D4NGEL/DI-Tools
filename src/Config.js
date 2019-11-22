@@ -4,6 +4,9 @@ export default class Config {
     static mdrDivisionNamesEndpoint() {
         return new Endpoint(_mdrUrL + '/get/divisionNames');
     }
+    static mdrHouseNamesEndpoint() {
+        return new Endpoint(_mdrUrL + '/get/houseNames');
+    }
     static mdrRoleNamesEndpoint() {
         return new Endpoint(_mdrUrL + '/get/roleNames');
     }
@@ -12,7 +15,7 @@ export default class Config {
     }
 }
 
-class Endpoint {
+export class Endpoint {
     constructor(url, method) {
         this._url = url;
         this._method = (method === undefined ? 'GET' : method);

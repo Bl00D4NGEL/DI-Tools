@@ -6,15 +6,22 @@ import CustomForm from "../BaseElements/Form";
 import GetTagListDataService from "../../services/GetTagListDataService/GetTagListDataService";
 import Grouper from "./Grouper";
 import DivisionTag from "./DivisionTag/DivisionTag";
+import HouseSelector from "./HouseSelector/HouseSelector";
 
 export default function TagList() {
     const [selectedDivisions, setSelectedDivisions] = useState([]);
+    const [selectedHouses, setSelectedHouses] = useState([]);
     const [selectedRoles, setSelectedRoles] = useState([]);
     const [membersToTag, setMembersToTag] = useState(undefined);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        new GetTagListDataService({divisions: selectedDivisions, roles: selectedRoles, setMembers: setMembersToTag});
+        new GetTagListDataService({
+            divisions: selectedDivisions,
+            houses: selectedHouses,
+            roles: selectedRoles,
+            setMembers: setMembersToTag
+        });
     };
 
     const generateTagList = () => {
@@ -22,7 +29,7 @@ export default function TagList() {
             const members = [];
             const memberIds = [];
             Object.keys(membersToTag).forEach(
-                position => membersToTag[position].forEach( member => {
+                position => membersToTag[position].forEach(member => {
                         if (!memberIds.includes(member.id)) {
                             members.push(member);
                             memberIds.push(member.id);
@@ -31,9 +38,10 @@ export default function TagList() {
                 )
             );
             return Object.keys(Grouper({members}))
-                    .map(
-                        division => <DivisionTag key={division} divisionName={division} positions={Grouper({members})[division]}/>
-                    );
+                .map(
+                    division => <DivisionTag key={division} divisionName={division}
+                                             positions={Grouper({members})[division]}/>
+                );
         }
         return null;
     };
@@ -43,9 +51,16 @@ export default function TagList() {
         <CustomForm
             formFields={
                 <div>
-                    <div className="flex">
-                        <DivisionSelector setSelectedDivisions={setSelectedDivisions}/>
-                        <RoleSelector setSelectedRoles={setSelectedRoles}/>
+                    <div className="flex" style={{justifyContent: 'space-between', maxWidth: 80 + '%'}}>
+                        <div>
+                            <DivisionSelector setSelectedDivisions={setSelectedDivisions}/>
+                        </div>
+                        <div>
+                            <HouseSelector setSelectedHouses={setSelectedHouses}/>
+                        </div>
+                        <div>
+                            <RoleSelector setSelectedRoles={setSelectedRoles}/>
+                        </div>
                     </div>
                     <div>
                         <SubmitInput value="Get Taglist"/>
