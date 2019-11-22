@@ -20,9 +20,14 @@ export default function TagList() {
     const generateTagList = () => {
         if (membersToTag !== undefined) {
             const members = [];
+            const memberIds = [];
             Object.keys(membersToTag).forEach(
-                position => membersToTag[position].forEach(
-                    member => members.push(member)
+                position => membersToTag[position].forEach( member => {
+                        if (!memberIds.includes(member.id)) {
+                            members.push(member);
+                            memberIds.push(member.id);
+                        }
+                    }
                 )
             );
             return Object.keys(Grouper({members}))
