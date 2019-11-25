@@ -9,6 +9,7 @@ export const MEMBER = 'TM';
 export const COACH = 'Coach';
 export const PROBATION = 'Probation';
 export const AWAY = 'Away';
+export const INITIATE = 'Initiate';
 
 export const POSITION_LONG_NAMES = {
     [HOUSE_GENERAL]: 'House General',
@@ -21,7 +22,8 @@ export const POSITION_LONG_NAMES = {
     [MEMBER]: 'Member',
     [COACH]: 'Coach',
     [PROBATION]: 'Probation',
-    [AWAY]: 'Away'
+    [AWAY]: 'Away',
+    [INITIATE]: 'Initiate'
 };
 
 export const PRIORITIES = {
@@ -33,7 +35,8 @@ export const PRIORITIES = {
     [SECOND_IN_CHARGE]: 6,
     [ROSTER_LEADER]: 7,
     [MEMBER]: 8,
-    [COACH]: 8,
-    [AWAY]: 9,
-    [PROBATION]: 10
+    [COACH]: 10,
+    [INITIATE]: 9,
+    [AWAY]: 11,
+    [PROBATION]: 12
 };
