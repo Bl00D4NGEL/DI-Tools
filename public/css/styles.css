@@ -178,49 +178,51 @@ button, input[type=submit] {
 
 /* The container */
 .div-checkbox {
-  display: block;
+  width: 55px;
+  height: 26px;
+  background: #333;
+  margin: 20px 10px;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-  .div-checkbox input {
+  border-radius: 50px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.2); }
+  .div-checkbox:after {
+    content: 'X';
+    color: #ddd;
     position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0; }
+    right: 10px;
+    top: 2px;
+    z-index: 0;
+    font: 12px/26px Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.15); }
+  .div-checkbox:before {
+    content: '\2713';
+    color: #b64240;
+    position: absolute;
+    left: 10px;
+    z-index: 0;
+    top: 2px;
+    font: 12px/26px Arial, sans-serif;
+    font-weight: bold; }
   .div-checkbox label {
-    margin: 25px; }
-
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1.5vw;
-  width: 1.5vw;
-  background-color: #ddd; }
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-  left: 0.5vw;
-  top: 0.3vh;
-  border: solid #b64240;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 0.5vw;
-  height: 1vw; }
-
-.div-checkbox input:checked ~ .checkmark:after {
-  display: block; }
+    display: block;
+    width: 24px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    z-index: 1;
+    margin: 0;
+    background: #fcfff4;
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3); }
+  .div-checkbox input[type=checkbox] {
+    visibility: hidden; }
+    .div-checkbox input[type=checkbox]:checked + label {
+      left: 24px; }
 
 .sidebar-toggle {
   position: fixed;
