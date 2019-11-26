@@ -7,12 +7,7 @@ export default class RouteConfig {
             'component': TagList,
             'name': 'Taglist',
             'default': true,
-        },
-        {
-            'path': '/taglist2',
-            'component': TagList,
-            'name': 'Taglist 2',
-        },
+        }
     ];
 
     static getAll() {
