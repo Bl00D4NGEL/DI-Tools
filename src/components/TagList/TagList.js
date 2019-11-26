@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import SubmitInput from "../BaseElements/SubmitInput";
+import SubmitButton from "../BaseElements/SubmitButton/SubmitButton";
 import DivisionSelector from "./DivisionSelector/DivisionSelector";
 import RoleSelector from "./RoleSelector/RoleSelector";
-import CustomForm from "../BaseElements/Form";
+import CustomForm from "../BaseElements/Form/Form";
 import GetTagListDataService from "../../services/GetTagListDataService/GetTagListDataService";
 import Grouper from "./Grouper/Grouper";
 import DivisionTag from "./DivisionTag/DivisionTag";
@@ -64,7 +64,7 @@ export default function TagList() {
                         </div>
                     </div>
                     <div>
-                        <SubmitInput value="Get Taglist"/>
+                        <SubmitButton value="Get Taglist"/>
                     </div>
                 </div>
             }

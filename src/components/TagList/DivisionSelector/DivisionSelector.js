@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import CustomSelect from "../../BaseElements/Select";
+import CustomSelect from "../../BaseElements/Select/Select";
 import LoadDivisionsService from "../../../services/LoadDivisionsService/LoadDivisionsService";
 import MultipleSelectGetSelectedOptionsHelper
     from "../../../helpers/MultipleSelectGetSelectedOptionsHelper/MultipleSelectGetSelectedOptionsHelper";

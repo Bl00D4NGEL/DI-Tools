@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import MultipleSelectGetSelectedOptionsHelper
     from "../../../helpers/MultipleSelectGetSelectedOptionsHelper/MultipleSelectGetSelectedOptionsHelper";
 import LoadHousesService from "../../../services/LoadHousesService/LoadHousesService";
-import CustomSelect from "../../BaseElements/Select";
+import CustomSelect from "../../BaseElements/Select/Select";
 import './house-selector.scss';
 
 export default function HouseSelector({setSelectedHouses}) {
