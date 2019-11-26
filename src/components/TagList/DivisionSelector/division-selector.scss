@@ -1,0 +1,12 @@
+@import '../../../assets/scss/variables';
+
+.division-selector > select {
+  height: $main_height * 4.5;
+  width: 80%;
+  overflow-y: auto;
+  color: black;
+
+  option {
+    padding: 10px 0 0 10px;
+  }
+}

@@ -4,9 +4,10 @@ import DivisionSelector from "./DivisionSelector/DivisionSelector";
 import RoleSelector from "./RoleSelector/RoleSelector";
 import CustomForm from "../BaseElements/Form";
 import GetTagListDataService from "../../services/GetTagListDataService/GetTagListDataService";
-import Grouper from "./Grouper";
+import Grouper from "./Grouper/Grouper";
 import DivisionTag from "./DivisionTag/DivisionTag";
 import HouseSelector from "./HouseSelector/HouseSelector";
+import './tag-list.scss';
 
 export default function TagList() {
     const [selectedDivisions, setSelectedDivisions] = useState([]);
@@ -47,7 +48,7 @@ export default function TagList() {
     };
 
 
-    return <div className="taglist">
+    return <div className="tag-list">
         <CustomForm
             formFields={
                 <div>

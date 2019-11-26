@@ -1,4 +1,4 @@
-import {AWAY, INITIATE, PROBATION} from "./DivisionTag/Positions";
+import {AWAY, INITIATE, PROBATION} from "../DivisionTag/Positions";
 
 export default function Grouper({members}) {
     const groups = {};

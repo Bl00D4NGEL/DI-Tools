@@ -3,6 +3,7 @@ import MultipleSelectGetSelectedOptionsHelper
     from "../../../helpers/MultipleSelectGetSelectedOptionsHelper/MultipleSelectGetSelectedOptionsHelper";
 import LoadHousesService from "../../../services/LoadHousesService/LoadHousesService";
 import CustomSelect from "../../BaseElements/Select";
+import './house-selector.scss';
 
 export default function HouseSelector({setSelectedHouses}) {
     const [selectableHouses, setSelectableHouses] = useState([]);
@@ -13,7 +14,7 @@ export default function HouseSelector({setSelectedHouses}) {
         <div style={{paddingBottom: 20 + 'px'}}>
             <span>Select houses to tag</span>
         </div>
-        <div className="division-select">
+        <div className="house-selector">
             <CustomSelect
                 data={{multiple: true}}
                 options={selectableHouses}

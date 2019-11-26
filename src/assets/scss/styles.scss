@@ -1,26 +1,5 @@
-/* Colors */
-$white: #fff;
-$primary_bg: #131313;
-$table_field_bg_color: #444;
-$table_head_bg_color: #292929;
-
-/* Damage Inc */
-$dmg_inc_red: #b64240;
-$dmg_inc_white: #ddd;
-
-/* Dimensions */
-$main_height: 7vh;
-$main_font_size: 1.5vw;
-$line_height: 1.4;
-$nav_menu_width: 210px;
-
-
-%no-select {
-  -webkit-user-select: none; /* Chrome all / Safari all */
-  -moz-user-select: none; /* Firefox all */
-  -ms-user-select: none; /* IE 10+ */
-  user-select: none; /* Likely future */
-}
+@import 'variables';
+@import 'helper';
 
 body {
   background-color: $primary_bg;
@@ -83,38 +62,9 @@ button, input[type=submit] {
   padding: 5px 20px;
 }
 
-.main-font-size {
-  font-size: $main_font_size;
-}
-
-.label-div {
-  margin: $main_height/2 0;
-}
-
-.division-select > select {
-  height: $main_height * 4.5;
-  width: 80%;
-  overflow-y: auto;
-  color: black;
-
-  option {
-    padding: 10px 0 0 10px;
-  }
-}
-
-.taglist > div {
-  margin: 20px;
-  div {
-    margin-right: 20px;
-  }
-}
-
 .content {
-  transition: margin-left .3s;
   margin: 85px 40px 40px 40px;
 }
-
-@import "helper";
 
 @import "small-desktop";
 @import "tablet";

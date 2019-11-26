@@ -3,6 +3,7 @@ import CustomSelect from "../../BaseElements/Select";
 import LoadDivisionsService from "../../../services/LoadDivisionsService/LoadDivisionsService";
 import MultipleSelectGetSelectedOptionsHelper
     from "../../../helpers/MultipleSelectGetSelectedOptionsHelper/MultipleSelectGetSelectedOptionsHelper";
+import './division-selector.scss';
 
 export default function DivisionSelector({setSelectedDivisions}) {
     const [selectableDivisions, setSelectableDivisions] = useState([]);
@@ -13,7 +14,7 @@ export default function DivisionSelector({setSelectedDivisions}) {
         <div style={{paddingBottom: 20 + 'px'}}>
             <span>Select divisions to tag</span>
         </div>
-        <div className="division-select">
+        <div className="division-selector">
             <CustomSelect
                 data={{multiple: true}}
                 options={selectableDivisions}
