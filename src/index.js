@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import * as serviceWorker from './serviceWorker';
-import AppRouter from "./AppRouter";
+import AppRouter from "./components/AppRouter/AppRouter";
+import './index.scss';
 
 ReactDOM.render(<AppRouter />, document.getElementById('root'));
 

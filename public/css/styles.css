@@ -86,36 +86,39 @@ button, input[type=submit] {
   border: 0;
   padding: 5px 20px; }
 
-.content {
+.main {
   margin: 85px 40px 40px 40px; }
 
-/* Small Desktops */
+/* Colors */
+/* Damage Inc */
+/* Dimensions */
 @media screen and (max-width: 1200px) {
   .dw-hide {
     display: none; }
 
   body {
-    font-size: 2vw; }
+    font-size: 1.5vw; }
 
   h1 {
-    font-size: 3vw; }
+    font-size: 2.5vw; }
 
   label {
-    font-size: 1.5vw; }
+    font-size: 1vw; }
 
   td {
-    font-size: 1.5vw; }
+    font-size: 1vw; }
 
   .main-font-size {
-    font-size: 2vw; }
+    font-size: 1.5vw; }
 
   .box {
-    width: 1.5vw; } }
-/* Tablet */
+    width: 1vw; } }
 @media screen and (max-width: 992px) {
   .tw-hide {
     display: none; } }
-/* Small Device / Landscape Mode */
+/* Colors */
+/* Damage Inc */
+/* Dimensions */
 @media screen and (max-width: 768px) {
   .sdw-hide {
     display: none; }

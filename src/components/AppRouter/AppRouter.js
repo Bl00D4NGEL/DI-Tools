@@ -1,7 +1,7 @@
-import RouteConfig from "./RouteConfig";
+import RouteConfig from "../../RouteConfig";
 import {BrowserRouter as Router, Redirect, Route} from "react-router-dom";
 import React from "react";
-import Navigation from "./components/Navigation/Navigation";
+import Navigation from "../Navigation/Navigation";
 
 export default function AppRouter() {
     const generateRoutes = () => {
@@ -12,9 +12,9 @@ export default function AppRouter() {
 
     return <Router>
         <Redirect to={RouteConfig.getDefaultPath()}/>
-        <div className="main">
+        <div>
             <Navigation/>
-            <div className="content">
+            <div className="main">
                 {generateRoutes()}
             </div>
         </div>
