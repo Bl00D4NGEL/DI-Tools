@@ -3,10 +3,15 @@ import TagList from "./components/TagList/TagList";
 export default class RouteConfig {
     static config = [
         {
-            'path': '/',
+            'path': '/tag-list',
             'component': TagList,
             'name': 'Taglist',
             'default': true,
+        },
+        {
+            'path': '/taglist2',
+            'component': TagList,
+            'name': 'Taglist 2',
         },
     ];
 

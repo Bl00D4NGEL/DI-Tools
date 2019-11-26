@@ -109,12 +109,12 @@ button, input[type=submit] {
   }
 }
 
-@import "spinner";
-@import "boxes";
-@import "symbols";
+.content {
+  transition: margin-left .3s;
+  margin: 85px 40px 40px 40px;
+}
+
 @import "helper";
-@import "checkboxes";
-@import "sidebar";
 
 @import "small-desktop";
 @import "tablet";

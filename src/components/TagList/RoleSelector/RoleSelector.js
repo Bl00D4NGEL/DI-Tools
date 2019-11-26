@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import CheckboxInput from "../../BaseElements/CheckboxInput";
+import Checkbox from "../../BaseElements/Checkbox/Checkbox";
 import LoadRolesService from "../../../services/LoadRolesService/LoadRolesService";
 
 export default function RoleSelector({setSelectedRoles}) {
@@ -44,7 +44,7 @@ export default function RoleSelector({setSelectedRoles}) {
             groups.push({
                 key: i,
                 data: possibleRoles.slice(i * maxValuesPerColumn, i * maxValuesPerColumn + maxValuesPerColumn).map(role => {
-                        return <CheckboxInput
+                        return <Checkbox
                             name={role}
                             value={role}
                             key={role}

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Loader from "./Loader";
+import Loader from "./Loader/Loader";
 
 export default function FakeLoader({content, timeOut}) {
     const [loaded, setLoaded] = useState(false);

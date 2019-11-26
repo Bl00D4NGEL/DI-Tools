@@ -1,6 +1,7 @@
 import React from 'react';
+import './checkbox.scss';
 
-export default function CheckboxInput({defaultChecked, description, value, name, isDisabled, onClick}) {
+export default function Checkbox({defaultChecked, description, value, name, isDisabled, onClick}) {
     const triggerCheckbox = (e) => {
         if (!['INPUT', 'LABEL'].includes(e.target.nodeName)) {
             e.currentTarget.childNodes[0].childNodes[0].click()

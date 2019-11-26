@@ -1,5 +1,5 @@
 import React from "react";
-
+import './loader.scss';
 export default function Loader({error, isLoaded, content}) {
     if (error) {
         return <div>Error: {error.message}</div>;
