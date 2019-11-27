@@ -2,6 +2,7 @@ import RouteConfig from "../../RouteConfig";
 import {BrowserRouter as Router, Redirect, Route} from "react-router-dom";
 import React from "react";
 import Navigation from "../Navigation/Navigation";
+import Footer from "../Footer/Footer";
 
 export default function AppRouter() {
     const generateRoutes = () => {
@@ -18,5 +19,6 @@ export default function AppRouter() {
                 {generateRoutes()}
             </div>
         </div>
+        <Footer/>
     </Router>
 }
