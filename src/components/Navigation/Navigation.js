@@ -25,7 +25,7 @@ export default function Navigation() {
     return <nav className="menu">
         {generateNavigationLinks()}
         <div id="di-logo">
-            <a target="_blank" href="https://di.community/"><img src={icon} alt="Damage Incorporated"/></a>
+            <a target="_blank" href="https://dmginc.gg/"><img src={icon} alt="Damage Incorporated"/></a>
         </div>
         <a onClick={toggleNavigation} className="toggle-nav" href="#">&#9776;</a>
     </nav>
