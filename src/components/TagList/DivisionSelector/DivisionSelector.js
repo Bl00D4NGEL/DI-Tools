@@ -1,23 +1,25 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import CustomSelect from "../../BaseElements/Select/Select";
-import LoadDivisionsService from "../../../services/LoadDivisionsService/LoadDivisionsService";
 import MultipleSelectGetSelectedOptionsHelper
     from "../../../helpers/MultipleSelectGetSelectedOptionsHelper/MultipleSelectGetSelectedOptionsHelper";
 import './division-selector.scss';
+import useDivisions from "../../../hooks/UseDivisions";
 
 export default function DivisionSelector({setSelectedDivisions}) {
-    const [selectableDivisions, setSelectableDivisions] = useState([]);
-    useEffect(() => {
-        LoadDivisionsService({setDivisions: setSelectableDivisions});
-    }, []);
+    const divisions = useDivisions();
+
     return <div>
         <div style={{paddingBottom: 20 + 'px'}}>
-            <span>Select divisions to tag</span>
+            <span>Select division(s) to tag</span>
         </div>
         <div className="division-selector">
             <CustomSelect
                 data={{multiple: true}}
-                options={selectableDivisions}
+                options={divisions.map(division => ({
+                    name: division,
+                    key: division,
+                    value: division
+                }))}
                 onChange={(e) => setSelectedDivisions(MultipleSelectGetSelectedOptionsHelper(e))}
             />
         </div>
