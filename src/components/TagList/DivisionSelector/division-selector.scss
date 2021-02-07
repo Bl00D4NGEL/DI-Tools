@@ -1,7 +1,5 @@
-@import '../../../assets/scss/variables';
-
 .division-selector > select {
-  height: $main_height * 4.5;
+  height: 60vh;
   width: 80%;
   overflow-y: auto;
   color: black;

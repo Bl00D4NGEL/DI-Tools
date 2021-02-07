@@ -11,5 +11,5 @@ export default function MemberTag({name, id}) {
 }
 
 const getProfileLink = (id, name) => {
-    return "https://dmginc.gg/profile/" + id + '-' + name + "/";
+    return "https://forum.dmginc.gg/profile/" + id + '-' + name + "/";
 };

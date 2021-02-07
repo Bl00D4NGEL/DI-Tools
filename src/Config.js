@@ -1,17 +1,17 @@
-const _mdrUrL = 'http://localhost:2048';
+const _mdrUrL = 'https://localhost:2048';
 
 export default class Config {
-    static mdrDivisionNamesEndpoint() {
-        return new Endpoint(_mdrUrL + '/get/divisionNames');
+    static mdrRanksEndpoint() {
+        return new Endpoint(_mdrUrL + '/ranks');
     }
-    static mdrHouseNamesEndpoint() {
-        return new Endpoint(_mdrUrL + '/get/houseNames');
+    static mdrPositionsEndpoint() {
+        return new Endpoint(_mdrUrL + '/positions');
     }
-    static mdrRoleNamesEndpoint() {
-        return new Endpoint(_mdrUrL + '/get/roleNames');
+    static mdrDivisionsEndpoint() {
+        return new Endpoint(_mdrUrL + '/divisions');
     }
     static mdrGetTagListEndpoint() {
-        return new Endpoint(_mdrUrL + '/get/tagList', 'POST');
+        return new Endpoint(_mdrUrL + '/generateTagList', 'POST');
     }
 }
 
