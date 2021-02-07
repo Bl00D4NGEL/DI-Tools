@@ -1,12 +1,6 @@
 const _mdrUrL = 'https://localhost:2048';
 
 export default class Config {
-    static mdrDivisionNamesEndpoint() {
-        return new Endpoint(_mdrUrL + '/get/divisionNames');
-    }
-    static mdrRoleNamesEndpoint() {
-        return new Endpoint(_mdrUrL + '/get/roleNames');
-    }
     static mdrRanksEndpoint() {
         return new Endpoint(_mdrUrL + '/ranks');
     }
@@ -17,7 +11,7 @@ export default class Config {
         return new Endpoint(_mdrUrL + '/divisions');
     }
     static mdrGetTagListEndpoint() {
-        return new Endpoint(_mdrUrL + '/get/tagList', 'POST');
+        return new Endpoint(_mdrUrL + '/generateTagList', 'POST');
     }
 }
 

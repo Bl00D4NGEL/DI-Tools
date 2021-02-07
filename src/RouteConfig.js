@@ -1,12 +1,19 @@
-import TagList from "./components/TagList/TagList";
+import TagListForm from "./components/TagList/TagListForm";
+import Help from "./components/Help/Help";
 
 export default class RouteConfig {
     static config = [
         {
-            'path': '/tag-list',
-            'component': TagList,
-            'name': 'Taglist',
-            'default': true,
+            path: '/tag-list',
+            component: TagListForm,
+            name: 'Taglist',
+            default: true,
+        },
+        {
+            path: '/help',
+            component: Help,
+            name: 'Help',
+            default: false
         }
     ];
 
